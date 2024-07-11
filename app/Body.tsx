@@ -1,111 +1,17 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import Slide from "../Slide";
-import TheComp from "../TheComp";
-import { Scomponents, TComponents } from "../components/Components";
+import TheComp from "./TheComp";
+import Link from "next/link";
+import Image from "next/image";
+import { Scomponents, TComponents } from "./components/Components";
 
-const Page = () => {
+const Body = () => {
   const style = {
     backgroundImage: "url('/bg4.jpeg')",
     backgroundRepeat: "no-repeat",
   };
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-  const navs = [
-    { id: 1, title: "Products" },
-    { id: 2, title: "Customers" },
-    { id: 3, title: "Company" },
-    { id: 4, title: "Pricing" },
-  ];
-  const imgs = [
-    {
-      id: 1,
-      img: "/chigosoft.svg",
-      style: { width: "150px", height: "200px" },
-    },
-    { id: 2, img: "/hh.svg" },
-    { id: 3, img: "/landpay.svg" },
-    { id: 4, img: "/wipg.svg" },
-    { id: 5, img: "/wipafir.svg" },
-    { id: 6, img: "/velox.svg" },
-  ];
   return (
     <div>
-      <div>
-        <div className="flex justify-between items-center px-[150px] py-7">
-          <div className="flex gap-10">
-            <div>
-              <Image src={"/blackLogo.svg"} alt="#" width={100} height={100} />
-            </div>
-            <div className="flex gap-8">
-              {navs.map((el: any) => (
-                <div key={el.id}>
-                  <h2 className="text-gray-500 text-[15px]">{el.title}</h2>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex gap-3">
-            <div className="bg-gray-300 p-2 rounded-md">
-              <Image src={"/phone.svg"} alt="#" width={15} height={15} />
-            </div>
-            <div className="bg-blue-800 flex justify-center items-center gap-[0.9] text-white font-semibold p-2 rounded-md h-8 text-[12px]">
-              <h1>My</h1>
-              <Image src={"/witheLogo.svg"} alt="#" width={50} height={50} />
-              <h1>Cloud</h1>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center">
-          <div className="border-b w-[76%]" />
-        </div>
-      </div>
-
-      <div className="px-[150px] pt-[55px] mb-6">
-        <h1 className="font-bold text-[60px] font-sans leading-[70px] pb-6">
-          All your <br /> businesses, in one <br /> place.
-        </h1>
-        <p className="font-medium text-[14px] text-gray-500 mb-8">
-          Run your businesses without limitations; support customers, increase{" "}
-          <br />
-          sales, and do more. For growing businesses and smart creators.🌿
-        </p>
-        <div className="flex gap-6 items-center">
-          <button className="p-2 rounded-md bg-blue-700 font-semibold text-[14px] text-white">
-            Get started NOW
-          </button>
-          <div className="flex gap-2 items-center">
-            <Link className="underline font-semibold text-[14px]" href={""}>
-              See pricing
-            </Link>
-            <Image src={"/witheArrow.svg"} alt="#" width={10} height={10} />
-          </div>
-        </div>
-      </div>
-
       <div className="px-[150px] mt-[50px]">
-        <div>
-          <h2 className="text-gray-700 text-[13px]">Trused by:</h2>
-          <div className="flex gap-5 mt-[-70px]">
-            {imgs.map((el: any) => (
-              <div className="flex gap-2" key={el.id}>
-                <Image
-                  src={el.img}
-                  alt="#"
-                  width={100}
-                  height={100}
-                  style={el.style}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
         <div>
           <h2 className="text-gray-600 font-semibold text-[27px]">
             Connect the tools that matters to your business
@@ -250,4 +156,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Body;
