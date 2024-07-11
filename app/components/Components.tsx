@@ -40,8 +40,8 @@ export const Components: FC<iComp> = ({
           <h2 className="font-semibold text-white text-[30px]">{title}</h2>
           <p className="font-semibold text-white text-[15px]">{desc}</p>
           <div className="flex gap-3">
-            {items.map((el: any) => (
-              <Image src={el} alt="#" width={50} height={50} />
+            {items.map((el: any, id: any) => (
+              <Image key={id} src={el} alt="#" width={50} height={50} />
             ))}
           </div>
         </div>
